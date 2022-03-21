@@ -2,9 +2,7 @@
 #include <string>
 #include <fstream>
 
-
 using namespace std;
-
 
 const int maxRow = 200;
 string eng[maxRow] = {};
@@ -12,24 +10,19 @@ string arm[maxRow] = {};
 
 void ss(){
 
-        char choice;
+    char choice;
     cout << "     =================================="<<endl;
     cout << "       Hello! Welcome to Translator"<<endl;
     
     fstream file;
     file.open("myText.txt");
     std::string candidate ;
-    
-    
-    
+  
     std::string username ;
     std::string password ;
 
-
 	if( file.is_open() )
 	{
-
-    
             std::cout << "-----------------" << std::endl;
             std::cout << " Enter Username"   << std::endl; 
             std::cout << "-----------------" << std::endl;
@@ -61,12 +54,8 @@ void ss(){
                                std::cin >> password;
 
                             }
+                      }            
               }
-              
-                            
-              }
-              
-              
               
               file.close();
               
@@ -75,7 +64,6 @@ void ss(){
    
 
     
-
 void addWord() {
 	string ang;
 	string armm;
@@ -173,7 +161,6 @@ void deleteWord(string search) {
 	}
 }
 
-#include <fstream>
 void saveToFIle()
 {
 	std::ofstream file("language.txt", std::ios_base::trunc);
@@ -260,7 +247,7 @@ int main() {
 	else if(chs==1){
 
 	
-ss();
+   ss();
 	do {
 		cout << "--M E N U--\n";
 		cout << "-1-Add Word" << endl;
@@ -300,11 +287,7 @@ ss();
 			break;
 		case 5:seeAll();
 			break;
-
-
-
 		}
-
 
 	} while (option != 6);
 	
